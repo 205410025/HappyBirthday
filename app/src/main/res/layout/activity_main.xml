@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+<!--
+Image view digunakan menampilkan gambar yang digunakan untuk background. Disini saya menggunakan layout with dan height
+wrap content yang digunakan untuk penyesuaian tinggi dan lebar sesuai tampilan android.
+-->
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/todo"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/androidparty" />
+<!--
+Text view digunakan untuk menampilkan text. disini saya menggunakan font casual untuk family font.
+margin start 30dp untuk mengatur posisi herizontal(kanan). margin top 50 dp untuk mengatur posisi
+vertikal(atas). untuk ukuran font menggunakan 34sp.
+-->
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="50dp"
+        android:fontFamily="casual"
+        android:text="@string/happy_birthday"
+        android:textAllCaps="false"
+        android:textColor="#000000"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        android:typeface="normal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+<!--
+Text view digunakan untuk menampilkan text. disini saya menggunakan font casual untuk family font.
+margin end 20dp untuk mengatur posisi herizontal(kiri). margin bottom 20dp untuk mengatur posisi
+vertikal(bawah). untuk ukuran font menggunakan 16sp.
+-->
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:fontFamily="serif-monospace"
+        android:text="@string/from_arya_putra"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+<!--
+button digunakan untuk tombol. layout width 100dp digunakan untuk panjang. layout height 50dp
+digunakan untuk lebar. margin start 16dp untuk mengatur posisi herizontal(kanan). margin bottom 16dp
+untuk mengatur posisi vertikal(bawah).
+-->
+    <Button
+        android:id="@+id/button"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="@string/next"
+        android:textColor="#090909"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="TextContrastCheck" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
